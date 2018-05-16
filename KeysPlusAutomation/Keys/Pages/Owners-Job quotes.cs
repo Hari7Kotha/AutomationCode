@@ -42,7 +42,7 @@ namespace Keys.Pages
                     Assert.AreEqual(expectedpageheading, Driver.GetTextValue(Driver.driver, ExcelLib.ReadData(5, "Locator"), ExcelLib.ReadData(5, "Value")));
                     Base.test.Log(LogStatus.Info, "Expected page heading: '" + expectedpageheading + " ' is displayed");
                     Base.test.Log(LogStatus.Pass, "User is navigated to Add new job page");
-                    
+
                 }
                 catch (Exception e)
                 {
@@ -85,7 +85,7 @@ namespace Keys.Pages
                 try
                 {
                     //click on choosefiles
-                    
+
                     Driver.ActionButton(Driver.driver, ExcelLib.ReadData(10, "Locator"), ExcelLib.ReadData(10, "Value"));
                     Thread.Sleep(5000);
 
@@ -93,7 +93,7 @@ namespace Keys.Pages
 
                     //AutoItX3 autoIt = new AutoItX3();
                     //autoIt.WinActivate("Open");
-                    
+
                     //autoIt.Send(ExcelLib.ReadData(RowCountBase, "Documents path"));
                     //Thread.Sleep(3000);
                     //autoIt.Send("{ENTER}");
@@ -106,7 +106,7 @@ namespace Keys.Pages
                 catch (Exception e)
                 {
                     Base.test.Log(RelevantCodes.ExtentReports.LogStatus.Info, "Photo upload Failed " + e.Message);
-                    
+
                 }
 
                 //scroll down to view element
@@ -121,7 +121,7 @@ namespace Keys.Pages
                     Driver.ActionButton(Driver.driver, ExcelLib.ReadData(11, "Locator"), ExcelLib.ReadData(11, "Value"));
                     Thread.Sleep(1000);
                     Base.test.Log(RelevantCodes.ExtentReports.LogStatus.Pass, "All mandatory fields entered, Clicked on submit button to add a job in marketplace");
-                                      
+
                 }
 
                 else
@@ -134,9 +134,13 @@ namespace Keys.Pages
                 //navigating to marketplace
                 Driver.ActionButton(Driver.driver, ExcelLib.ReadData(12, "Locator"), ExcelLib.ReadData(12, "Value"));
 
+     
+
                 //checking if the user is navigated to marketplace
                 try
                 {
+                    
+
                     string marketplaceheading = "Available Jobs";
                     Assert.AreEqual(marketplaceheading, Driver.GetTextValue(Driver.driver, ExcelLib.ReadData(13, "Locator"), ExcelLib.ReadData(13, "Value")));
                     Base.test.Log(LogStatus.Info, "Expected page heading: '" + marketplaceheading + " ' is displayed");
@@ -186,5 +190,6 @@ namespace Keys.Pages
             }
 
         }
+               
     }
 }

@@ -335,7 +335,13 @@ namespace Keys.Test
                 watchlist.TenantWatchlist();
             }
             
-
+            [Test]
+            public void SearchProperty()
+            {
+                test = extent.StartTest("Search for a Property");
+                PO obj = new PO();
+                obj.SearchProp();
+            }
 
         }
     }
