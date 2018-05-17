@@ -347,13 +347,14 @@ namespace Keys.Test
             }
 
             [Test]
-            public void SendRequest()
+            public void AddRequest()
             {
+                //Start Test
                 test = extent.StartTest("Search for a Property");
                 PO obj = new PO();
                 obj.SendReq();
             }
-
+           
         }
     }
 }

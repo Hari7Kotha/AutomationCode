@@ -95,18 +95,12 @@ namespace Keys.Test
 
         }
 
-
         internal void SendReq()
         {
-
             Thread.Sleep(1500);
             //Click on Skip button
-            Skip.Click();
-            Thread.Sleep(1500);
 
-            //Click on Req button
-            Req.Click();
-           
+
         }
     }
 }
