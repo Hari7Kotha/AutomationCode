@@ -34,6 +34,10 @@ namespace Keys.Test
         [FindsBy(How = How.XPath, Using = "/html/body/div[5]/div/div[5]/a[1]")]
         private IWebElement Skip { set; get; }
 
+        //Click on Request button
+        [FindsBy(How =How.XPath,Using= "//*[@id='main-content']/section/div[1]/div/div[3]/div/div[1]/div[2]/div[2]/div/a[3]")]
+        private IWebElement Req { set; get; }
+
         #endregion
 
         public void Common_methods()
@@ -89,6 +93,20 @@ namespace Keys.Test
                 Base.test.Log(RelevantCodes.ExtentReports.LogStatus.Fail, "Test Failed, Search Unsuccessfull", e.Message);
             }
 
+        }
+
+
+        internal void SendReq()
+        {
+
+            Thread.Sleep(1500);
+            //Click on Skip button
+            Skip.Click();
+            Thread.Sleep(1500);
+
+            //Click on Req button
+            Req.Click();
+           
         }
     }
 }

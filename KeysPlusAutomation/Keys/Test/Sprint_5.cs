@@ -257,9 +257,9 @@ namespace Keys.Test
                 PropertyOwner_Onboarding obj = new PropertyOwner_Onboarding();
                 obj.Property_OwnerOnboard_addtenant();
             }
+
             //service supplier onboarding
             [Test]
-
             public void servicesupplier_onboarding()
             {
                 // creates a toggle for the given test, adds all log events under it
@@ -270,7 +270,6 @@ namespace Keys.Test
 
             //tenant onboarding
             [Test]
-
             public void tenant_onboarding()
             {
                 // creates a toggle for the given test, adds all log events under it
@@ -288,6 +287,7 @@ namespace Keys.Test
                 Owners_Job_quotes obj = new Owners_Job_quotes();
                 obj.Addnewjob();
             }
+
             //Add new Property
             [Test]
             public void Add_New_Property()
@@ -297,6 +297,7 @@ namespace Keys.Test
                 NewProperty Add = new NewProperty();
                 Add.AddnewProperty();
             }
+
             //Edit Property
             [Test]
             public void Edit_propety()
@@ -305,8 +306,8 @@ namespace Keys.Test
                 test = extent.StartTest("Check whether the user is able to edit property");
                 NewProperty Edit = new NewProperty();
                 Edit.EditProperty();
-
             }
+
             // Delete Property
             [Test]
             public void Delete_Property()
@@ -316,6 +317,7 @@ namespace Keys.Test
                 NewProperty delete = new NewProperty();
                 delete.DeleteProperty();
             }
+
             //Advanced search
             [Test]
             public void Advanced_Search()
@@ -325,6 +327,7 @@ namespace Keys.Test
                 Advanced_search search = new Advanced_search();
                 search.Advancedsearch();
             }
+
             //Tenant Watchlist
             [Test]
             public void Tenant_Watchlist()
@@ -341,6 +344,14 @@ namespace Keys.Test
                 test = extent.StartTest("Search for a Property");
                 PO obj = new PO();
                 obj.SearchProp();
+            }
+
+            [Test]
+            public void SendRequest()
+            {
+                test = extent.StartTest("Search for a Property");
+                PO obj = new PO();
+                obj.SendReq();
             }
 
         }
